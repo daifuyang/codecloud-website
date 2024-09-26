@@ -1,7 +1,118 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+	{
+		name: "网站定制开发",
+	},
+	{
+		name: "APP定制开发",
+	},
+	{
+		name: "小程序定制开发",
+	},
+	{
+		name: "管理系统定制开发",
+	},
+];
 ---
 
 <Layout title="code cloud">
-	<h1>hello home</h1>
+	<!-- 英雄页 -->
+	<section class="bg-white dark:bg-gray-900">
+		<div
+			class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+		>
+			<div class="mr-auto place-self-center lg:col-span-7">
+				<h1
+					class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+				>
+					引领数字化转型
+				</h1>
+				<p
+					class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+				>
+					“提供响应式网站建设、混合小程序开发及高效管理软件解决方案，助力企业实现全面数字化转型”
+				</p>
+				<a
+					href="#"
+					class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+				>
+					立即咨询
+					<svg
+						class="w-5 h-5 ml-2 -mr-1"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							fill-rule="evenodd"
+							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path></svg
+					>
+				</a>
+				<!-- <a
+					href="#"
+					class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+				>
+					Speak to Sales
+				</a> -->
+			</div>
+			<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+				<img src="/images/hero-bg.png" alt="mockup" />
+			</div>
+		</div>
+	</section>
+
+	<!-- 服务页 -->
+	<section class="bg-gray-50 dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+			<div class="mx-auto text-center mb-8 lg:mb-16">
+				<h2
+					class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+				>
+					我们的服务
+				</h2>
+				<p class="text-gray-500 sm:text-xl dark:text-gray-400">
+					“专注于响应式网站建设、混合小程序开发和高效管理软件开发，拥有10年互联网开发经验。”
+				</p>
+			</div>
+			<div
+				class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0"
+			>
+				{
+					services.map((item) => {
+						return (
+							<div class="bg-white rounded-md px-6 py-4">
+								<div class="flex items-center mb-4">
+									<div class="flex justify-center items-center mr-2 overflow-hidden w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+										<svg
+											class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+											fill="currentColor"
+											viewBox="0 0 20 20"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+									</div>
+									<h3 class="text-xl font-bold dark:text-white">
+										{item.name}
+									</h3>
+								</div>
+								<p class="text-gray-500 dark:text-gray-400">
+									Plan it, create it, launch it. Collaborate
+									seamlessly with all the organization and hit
+									your marketing goals every month with our
+									marketing plan.
+								</p>
+							</div>
+						);
+					})
+				}
+			</div>
+		</div>
+	</section>
 </Layout>
