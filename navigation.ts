@@ -20,11 +20,6 @@ export default [
         target: "_self"
     },
     {
-        name: "客户评价",
-        href: "/testimonials",
-        target: "_self"
-    },
-    {
         name: "博客分享",
         href: "/blog",
         target: "_self"
